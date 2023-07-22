@@ -5,8 +5,24 @@ previous two terms. For example, if 0 and 1 are the two previous terms in a seri
 the next term will be 1(0+1).
  */
 
+import java.util.Scanner;
+
 public class FibonacciSeries {
     public static void main(String[] args) {
-        System.out.println("");
-    }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the term: ");
+        int term = scanner.nextInt();
+
+        int number1 = 0 ;
+        int number2 = 1;
+        int number3;
+
+        System.out.println("Fibonacci Series :- ");
+        for (int i=0; i<term; i++) {
+            number3 = number1 + number2;
+            number1 = number2;
+            number2 = number3;
+            System.out.println(number3);
+        }
+     }
 }
